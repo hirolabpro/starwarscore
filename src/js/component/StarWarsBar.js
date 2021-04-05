@@ -7,13 +7,13 @@ export const StarWarsBar = () => {
 	const { store, actions } = useContext(Context);
 	return (
 		<Container>
-			<Navbar bg="light" expand="lg">
+			<Navbar bg="transparent" expand="lg">
 				<Link to="/">
 					<Navbar.Brand href="#">
 						<img
-							src="https://logos-download.com/wp-content/uploads/2016/09/Star_Wars_logo_logotype.png"
-							width="70"
-							height="45"
+							src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png"
+							width="90"
+							height="70"
 							className="d-inline-block align-top"
 							alt="React Bootstrap logo"
 						/>
@@ -22,7 +22,7 @@ export const StarWarsBar = () => {
 				<Navbar.Collapse className="justify-content-end">
 					<DropdownButton
 						id="dropdown-basic-button"
-						variant="dark"
+						variant="warning"
 						title={"Favorites " + store.favorites.length}>
 						{store.favorites.length == 0 ? (
 							<Dropdown.Item>Empty</Dropdown.Item>

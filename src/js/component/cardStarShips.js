@@ -27,10 +27,10 @@ export const StarShips = () => {
 											<Button variant="warning">Learn more....</Button>
 										</Link>
 										<Link>
-										{store.favorites.includes(item.name) ? null : (
+											{store.favorites.includes(item.name) ? null : (
 												<Button
 													onClick={() => actions.setFavorites(item.name)}
-													variant="outline-warning">
+													variant="warning">
 													<i className="far fa-heart" />
 												</Button>
 											)}
