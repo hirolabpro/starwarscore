@@ -15,23 +15,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			apiCharacters: async () => {
-				const url = "https://swapi.dev/api/people/";
+				const url = "https://3000-tomato-aphid-s0ef8lj4.ws-us03.gitpod.io/people/";
 				const response = await fetch(url);
 				const data = await response.json();
-				setStore({ characters: data.results });
+				setStore({ characters: data }); // data.results if you are using the swapi API
 			},
 			apiPlanets: async () => {
-				const url = "https://swapi.dev/api/planets/";
+				const url = "https://3000-tomato-aphid-s0ef8lj4.ws-us03.gitpod.io/planets/";
 				const response = await fetch(url);
 				const data = await response.json();
-				setStore({ planets: data.results });
+				setStore({ planets: data });
 			},
 
 			apiStarShips: async () => {
-				const url = "https://swapi.dev/api/starships/";
+				const url = "https://3000-tomato-aphid-s0ef8lj4.ws-us03.gitpod.io/starships/";
 				const response = await fetch(url);
 				const data = await response.json();
-				setStore({ starships: data.results });
+				setStore({ starships: data });
 			},
 
 			setFavorites: name => {

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 export const StarWarsBar = () => {
 	const { store, actions } = useContext(Context);
+	console.log("favoritos", store.favorites);
 	return (
 		<Container>
 			<Navbar bg="transparent" expand="lg">
@@ -30,20 +31,13 @@ export const StarWarsBar = () => {
 							store.favorites.map((favorite, i) => {
 								return (
 									<Dropdown.Item eventKey={i} key={i} onClick={() => actions.deleteFavorite(i)}>
-										{favorite.type == "people" ? (
-											<div>
-												<i className="fas fa-id-card">
-													&nbsp;
-													{favorite.name}
-												</i>
-												&nbsp;&nbsp;&nbsp;
-												<i className="far fa-trash-alt" />
-											</div>
-										) : (
-											<div>
-												<i className="far fa-trash-alt" />
-											</div>
-										)}
+										<div>
+											{" "}
+											{favorite}
+											<i className="fas fa-id-card">&nbsp;</i>
+											&nbsp;&nbsp;&nbsp;
+											<i className="far fa-trash-alt" />
+										</div>
 									</Dropdown.Item>
 								);
 							})
