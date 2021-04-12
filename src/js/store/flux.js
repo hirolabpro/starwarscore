@@ -15,20 +15,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			apiCharacters: async () => {
-				const url = "https://3000-tomato-aphid-s0ef8lj4.ws-us03.gitpod.io/people/";
+				const url = "https://app-starwarscr.herokuapp.com/people/";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ characters: data }); // data.results if you are using the swapi API
 			},
 			apiPlanets: async () => {
-				const url = "https://3000-tomato-aphid-s0ef8lj4.ws-us03.gitpod.io/planets/";
+				const url = "https://app-starwarscr.herokuapp.com/planets/";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ planets: data });
 			},
 
 			apiStarShips: async () => {
-				const url = "https://3000-tomato-aphid-s0ef8lj4.ws-us03.gitpod.io/starships/";
+				const url = "https://app-starwarscr.herokuapp.com/starships/";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ starships: data });
