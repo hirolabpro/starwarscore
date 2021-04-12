@@ -16,7 +16,7 @@ export const Planets = () => {
 							<Card style={{ width: "18rem" }}>
 								<Card.Img
 									variant="top"
-									src="https://static.wikia.nocookie.net/starwars/images/4/4d/Tython_TMS2.png/revision/latest?cb=20201205044714"
+									src="https://starwarsblog.starwars.com/wp-content/uploads/2018/10/mustafar-tall.jpg"
 								/>
 								<Card.Body className="display-5 text-center">
 									<Card.Title>{item.name}</Card.Title>
