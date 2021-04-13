@@ -6,7 +6,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 import { Footer } from "./component/footer";
-
+import { Login } from "./views/login";
 import { StarWarsBar } from "./component/StarWarsBar";
 import { Character } from "./component/cardCharacters";
 import { Planets } from "./component/cardPlanets";
@@ -29,6 +29,7 @@ const Layout = () => {
 				<ScrollToTop>
 					<StarWarsBar />
 					<Switch>
+						<Route exact path="/login" component={Login} />
 						<Route exact path="/" component={StartHome} />
 						<Route exact path="/people" component={Character} />
 						<Route exact path="/people/:id" component={CharacterView} />
